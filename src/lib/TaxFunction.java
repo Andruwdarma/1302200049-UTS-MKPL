@@ -48,4 +48,20 @@ public class TaxFunction {
 
 	}
 
+	public static int hitungPenghasilanTidakKenaPajak(boolean isMarried, int numberOfChildren) {
+		int hitungPenghasilanTidakKenaPajak = 54000000;
+
+		if (isMarried) {
+			hitungPenghasilanTidakKenaPajak += 4500000;
+		}
+
+		if (numberOfChildren > 0 && numberOfChildren <= 3) {
+			hitungPenghasilanTidakKenaPajak += numberOfChildren * 4500000;
+		} else if (numberOfChildren > 3) {
+			hitungPenghasilanTidakKenaPajak += 3 * 4500000;
+		}
+
+		return hitungPenghasilanTidakKenaPajak;
+	}
+
 }
